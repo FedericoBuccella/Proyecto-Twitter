@@ -1,0 +1,33 @@
+  <h1>Twitter Clone</h1>
+
+  <form action="/tweet" method="post">
+    <label for="username">Username:</label>
+    <input type="text" name="username" required>
+    <br>
+    <label for="content">Tweet:</label>
+    <textarea name="content" required></textarea>
+    <br>
+    <button type="submit">Tweet</button>
+  </form>
+
+  <h2>Timeline</h2>
+  <ul>
+    {{#each tweets}}
+      <li><strong>{{this.username}}</strong>: {{this.content}}</li>
+    {{/each}}
+  </ul>
+
+  <ul>
+    
+  </ul>
+
+  <h2>Follow Users</h2>
+    <form action="/follow" method="post">
+    <label for="followerUsername">Your Username:</label>
+    <input type="text" name="followerUsername" required>
+    <br>
+    <label for="followeeUsername">Username to Follow:</label>
+    <input type="text" name="followeeUsername" required>
+    <br>
+    <button type="submit">Follow</button>
+    </form>
